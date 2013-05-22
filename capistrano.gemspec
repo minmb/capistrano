@@ -4,12 +4,12 @@ require "capistrano/version"
 
 Gem::Specification.new do |s|
 
-  s.name        = "capistrano"
+  s.name        = "minmb-capistrano"
   s.version     = Capistrano::Version.to_s
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jamis Buck", "Lee Hambley"]
   s.email       = ["jamis@jamisbuck.org", "lee.hambley@gmail.com"]
-  s.homepage    = "http://github.com/capistrano/capistrano"
+  s.homepage    = "http://github.com/minmb/capistrano"
   s.summary     = %q{Capistrano - Welcome to easy deployment with Ruby over SSH}
   s.description = %q{Capistrano is a utility and framework for executing commands in parallel on multiple remote machines, via SSH.}
   s.files         = `git ls-files`.split("\n")
@@ -24,13 +24,13 @@ Gem::Specification.new do |s|
 
   if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
     s.add_runtime_dependency(%q<highline>, [">= 0"])
-    s.add_runtime_dependency(%q<net-ssh>, [">= 2.0.14"])
+    s.add_runtime_dependency(%q<minmb-net-ssh>, [">= 2.0.14"])
     s.add_runtime_dependency(%q<net-sftp>, [">= 2.0.0"])
     s.add_runtime_dependency(%q<net-scp>, [">= 1.0.0"])
     s.add_runtime_dependency(%q<net-ssh-gateway>, [">= 1.1.0"])
     s.add_development_dependency(%q<mocha>, ["0.9.12"])
   else
-    s.add_dependency(%q<net-ssh>, [">= 2.0.14"])
+    s.add_dependency(%q<minmb-net-ssh>, [">= 2.0.14"])
     s.add_dependency(%q<net-sftp>, [">= 2.0.0"])
     s.add_dependency(%q<net-scp>, [">= 1.0.0"])
     s.add_dependency(%q<net-ssh-gateway>, [">= 1.1.0"])
